@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("principal").addEventListener("blur", checkPrincipal);
 	document.getElementById("capital").addEventListener("blur", checkCapital);
 	document.getElementById("setdate").addEventListener("blur", checkSetdate);
-});
+}); //end of DOM
 
 function checkUno() {
 	let uno = document.getElementById("uno").value;
@@ -27,7 +27,7 @@ function checkUno() {
 		document.getElementById("b1").disabled = false;
 
 	}
-}
+} //end of checkUno
 
 function checkCname() {
 	let cname = document.getElementById("cname").value;
@@ -36,7 +36,7 @@ function checkCname() {
 	} else {
 		document.getElementById("cnamediv").innerHTML = "<img src='images/check.png'/>";
 	}
-}
+} //end of checkCname
 
 function checkAddr() {
 	let addr = document.getElementById("address").value;
@@ -45,7 +45,7 @@ function checkAddr() {
 	} else {
 		document.getElementById("addressdiv").innerHTML = "<img src='images/check.png'/>";
 	}
-}
+} // end of checkAddr
 
 function checkPrincipal() {
 	let principal = document.getElementById("principal").value;
@@ -54,7 +54,7 @@ function checkPrincipal() {
 	} else {
 		document.getElementById("principaldiv").innerHTML = "<img src='images/check.png'/>";
 	}
-}
+} //end of checkPrincipal
 
 function checkCapital() {
 	let numberCheck = /^[0-9]{1,}$/ ;
@@ -68,7 +68,7 @@ function checkCapital() {
 	} else {
 		document.getElementById("capitaldiv").innerHTML = "<img src='images/check.png'/>";
 	}
-}
+} // end of checkCapital
 
 function checkSetdate() {
 	let setdate = document.getElementById("setdate").value;
@@ -91,7 +91,7 @@ function checkSetdate() {
 			document.getElementById("setdatediv").innerHTML = "<img src=images/warning.png>  不合法日期";
 		}
 	}
-}
+} // end of checkSetdate
 
 function focusUno() {
 	document.getElementById("uno").removeEventListener('blur', checkUno);
@@ -108,7 +108,7 @@ function focusUno() {
 	document.getElementById("capitaldiv").innerHTML = ""
 	document.getElementById("setdate").removeEventListener("blur", checkSetdate);
 	document.getElementById("setdatediv").innerHTML = ""
-}
+} // end of focusUno
 
 function purpose() {
 	let selectValue = document.getElementById("s1").value;
@@ -129,7 +129,7 @@ function purpose() {
 		document.getElementById("setdatediv").innerHTML = ""
 		document.getElementById("setdate").addEventListener("blur", checkSetdate);
 		
-	}
+	} // end of purpose
 }
 
 function unoExist() {
@@ -155,4 +155,4 @@ function unoExist() {
 	xhttp.open("GET", url, true);
 
 	xhttp.send();
-}
+} // end of UnoExist
